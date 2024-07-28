@@ -1,0 +1,16 @@
+/* TopicItem.css */
+.topic-item {
+    background-color: #000000;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(33.333% - 10px); /* Adjust width for gaps */
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 600px) {
+    .topic-item {
+      width: 100%;
+    }
+  }
+  

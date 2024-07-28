@@ -1,0 +1,34 @@
+/* ProgressTracker.css */
+.progress-tracker-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.progress-tracker-container h2 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.progress-tracker-container p {
+  color: rgb(0, 0, 0); /* Set text color to black */
+  font-size:20px;
+  font-weight:700;
+  margin: 5px 0;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .progress-tracker-container {
+      padding: 10px;
+  }
+
+  progress {
+      height: 15px;
+  }
+}

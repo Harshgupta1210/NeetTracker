@@ -1,0 +1,40 @@
+/* Scorecard.css */
+.scorecard-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .scorecard-container h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  .scorecard-container p {
+    margin: 5px 0;
+  }
+  
+  .subject-progress {
+    margin-top: 15px;
+  }
+  
+  subject-progress h4 {
+    color: #333;
+  }
+  
+  progress {
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+  }
+  
+  /* ProfilePage.css */
+  .profile-page-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fffdfd;
+  }
+  
