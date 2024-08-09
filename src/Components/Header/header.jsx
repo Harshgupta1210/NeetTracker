@@ -1,18 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './header.css';
-import neet from '../../assets/neet.jpg';
 
-const Header = () => (
-  <header>
-    {/* <img src={neet} alt="NEET Syllabus Tracker Logo" className="header-logo" /> */}
-    <h1>NEET Syllabus Tracker</h1>
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/progress">Progress</Link>
-      <Link to="/profile">Profile</Link>
-    </nav>
-  </header>
-);
+import { Link } from 'react-router-dom';
+import './header.css'; // Importing CSS file for styling
+
+const Header = () => {
+  return (
+    <header className="header">
+      <h1 className="header-title">NEET Syllabus Tracker</h1>
+      <button className="login-button">
+        <Link to="/Login" className="login-link">Login</Link>
+      </button>
+    </header>
+  );
+};
 
 export default Header;

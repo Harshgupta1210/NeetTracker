@@ -1,0 +1,128 @@
+/* General container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  width:100vh;
+  height: 100vh;
+  padding: 0px;
+  background-color: #000000;
+}
+
+/* Form container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Form label styling */
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+  
+}
+
+/* Input field styling */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Error message styling */
+.form-error {
+  margin-top: 5px;
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+/* Submit button styling */
+.form-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer text and link styling */
+.form-footer {
+  margin-top: 15px;
+  text-align: center;
+  color: #555;
+}
+
+.form-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+  }
+
+  .form-button {
+    font-size: 14px;
+  }
+}

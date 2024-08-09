@@ -7,6 +7,8 @@ import ProgressTracker from './Components/ProgressTracker/ProgressTracker';
 import ProfilePage from './Components/Profile/Profile'; // Ensure this import is correct
 import UserProvider from './UserContext';
 import syllabusData from './SyllabusData'; // Import syllabusData
+import Login from './Components/Login/Login';
+import Signup from './Components/Signup/Signup';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/" element={<SyllabusList syllabusData={syllabusData} />} />
             <Route path="/progress" element={<ProgressTracker />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/Login" element={< Login />}/>
+            <Route path="/Signup" element={<Signup />}/>
           </Routes>
         </div>
       </Router>

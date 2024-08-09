@@ -12,14 +12,14 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #f3f3f5aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #fafbfbaa);
 }
 
 .app-container {
-  background-image: url('./assets/neet.jpg'); /* Update with the path to your image */
+  /* background-image: url('./assets/neet.jpg');  */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
