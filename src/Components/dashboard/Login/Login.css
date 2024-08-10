@@ -5,6 +5,7 @@
   align-items: center;
   padding: 20px;
   background-color: #f0f2f5;
+  min-height: 100vh;
 }
 
 /* Form container */
@@ -22,37 +23,42 @@
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
-
+  color: #000000;
 }
 
 /* Form group styling */
-.form-group {
+.form1-group {
   margin-bottom: 15px;
 }
 
 /* Form label styling */
-.form-label {
+.form1-label {
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
-  color: #555;
+  color: #ffffff;
 }
 
 /* Input field styling */
-.form-input {
+.form1-input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  color: #333;
+  color: #ffffff;
   box-sizing: border-box;
+  background-color: #333333; /* Darker background to contrast with white text */
 }
 
-.form-input:focus {
+.form-input1::placeholder {
+  color: #ffffff; /* White placeholder text */
+}
+
+.form-input1:focus {
   border-color: #007bff;
   outline: none;
+  background-color: #444444; /* Slightly lighter background on focus */
 }
 
 /* Error message styling */
@@ -103,7 +109,7 @@
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: #333333;
 }
 
 .register-link a {
@@ -117,7 +123,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 576px) {
-  .login-form {
+  .login1-form {
     padding: 15px;
   }
 
@@ -129,7 +135,27 @@
     font-size: 14px;
   }
 
-  .login-button {
+  .login1-button {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-title {
+    font-size: 18px;
+  }
+
+  .form-input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .login1-button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .register-link {
+    font-size: 12px;
   }
 }

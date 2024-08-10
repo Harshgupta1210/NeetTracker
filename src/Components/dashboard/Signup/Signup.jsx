@@ -49,53 +49,53 @@ const SignUp = () => {
         >
           {({ isSubmitting }) => (
             <Form>
-              <div className="form-group">
-                <label className="form-label" htmlFor="name">
+              <div className="form1-group">
+                <label className="form1-label" htmlFor="name">
                   Name
                 </label>
                 <Field
                   type="text"
                   name="name"
-                  className="form-input"
+                  className="form1-input"
                   id="name"
                   placeholder="Enter your name"
                 />
                 <ErrorMessage name="name" component="div" className="form-error" />
               </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="email">
+              <div className="form1-group">
+                <label className="form1-label" htmlFor="email">
                   Email
                 </label>
                 <Field
                   type="email"
                   name="email"
-                  className="form-input"
+                  className="form1-input"
                   id="email"
                   placeholder="Enter your email"
                 />
                 <ErrorMessage name="email" component="div" className="form-error" />
               </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="password">
+              <div className="form1group">
+                <label className="form1-label" htmlFor="password">
                   Password
                 </label>
                 <Field
                   type="password"
                   name="password"
-                  className="form-input"
+                  className="form1-input"
                   id="password"
                   placeholder="Enter your password"
                 />
                 <ErrorMessage name="password" component="div" className="form-error" />
               </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="confirmPassword">
+              <div className="form1-group">
+                <label className="form1-label" htmlFor="confirmPassword">
                   Confirm Password
                 </label>
                 <Field
                   type="password"
                   name="confirmPassword"
-                  className="form-input"
+                  className="form1-input"
                   id="confirmPassword"
                   placeholder="Enter your password again"
                 />

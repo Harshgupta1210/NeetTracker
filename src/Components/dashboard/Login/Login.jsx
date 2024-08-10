@@ -44,23 +44,23 @@ const Login = () => {
         >
           {() => (
             <Form>
-              <div className="form-group">
-                <label className="form-label" htmlFor="email">Email</label>
+              <div className="form1-group">
+                <label className="form1-label" htmlFor="email">Email</label>
                 <Field
                   type="email"
                   name="email"
-                  className="form-input"
+                  className="form1-input"
                   id="email"
                   placeholder="Enter your email"
                 />
                 <ErrorMessage name="email" component="div" className="error-message" />
               </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="password">Password</label>
+              <div className="form1-group">
+                <label className="form1-label" htmlFor="password">Password</label>
                 <Field
                   type="password"
                   name="password"
-                  className="form-input"
+                  className="form1-input"
                   id="password"
                   placeholder="Enter your password"
                 />

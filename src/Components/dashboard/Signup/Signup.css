@@ -3,10 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
-  width:100vh;
+  width: 100%;
   height: 100vh;
-  padding: 0px;
+  padding: 0;
   background-color: #000000;
 }
 
@@ -18,6 +17,7 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 15px; /* Adding margin to prevent the form from touching screen edges on small devices */
 }
 
 /* Form title */
@@ -29,31 +29,31 @@
 }
 
 /* Form group styling */
-.form-group {
+.form1-group {
   margin-bottom: 15px;
 }
 
 /* Form label styling */
-.form-label {
+.form1-label {
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
   color: #555;
-  
 }
 
 /* Input field styling */
-.form-input {
+.form1-input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 15px;
   font-size: 16px;
-  color: #333;
+  color: #ffffff; /* Set text color to white */
+  background-color: #333; /* Set background color to dark to make white text readable */
   box-sizing: border-box;
 }
 
-.form-input:focus {
+.form1-input:focus {
   border-color: #007bff;
   outline: none;
 }
@@ -109,8 +109,28 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 90%; /* Slightly increase the form width on tablets */
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .form1-input {
+    font-size: 15px;
+  }
+
+  .form-button {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 576px) {
   .form-container {
+    max-width: 100%; /* Full width for small devices */
     padding: 15px;
   }
 
@@ -118,11 +138,35 @@
     font-size: 20px;
   }
 
-  .form-input {
+  .form1-input {
     font-size: 14px;
   }
 
   .form-button {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  .form1-input {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .form-button {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .form-footer {
+    font-size: 12px;
   }
 }
