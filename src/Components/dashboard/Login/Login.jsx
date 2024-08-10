@@ -1,12 +1,15 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';  // Updated to useNavigate
+// Login.jsx
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from 'yup';
 import axios from 'axios';
 import './Login.css';
+import { UserContext } from '../../../UserContext';
 
 const Login = () => {
-  const navigate = useNavigate();  // Updated to useNavigate
+  const { login } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const initialValues = {
     email: '',
@@ -22,8 +25,8 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:5000/login', values);
       console.log('Login Successful:', response.data);
-      // Redirect to a different page on successful login
-      navigate('/');  // Updated to use navigate
+      login();  // Update authentication state
+      navigate('/');  // Redirect to dashboard
     } catch (error) {
       console.error('Login Error:', error.response ? error.response.data : error.message);
       alert('Login failed. Please check your credentials.');
@@ -31,8 +34,8 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-form">
+    <div className="login1-container">
+      <div className="login1-form">
         <h1 className="login-title">Login</h1>
         <Formik
           initialValues={initialValues}
@@ -42,9 +45,7 @@ const Login = () => {
           {() => (
             <Form>
               <div className="form-group">
-                <label className="form-label" htmlFor="email">
-                  Email
-                </label>
+                <label className="form-label" htmlFor="email">Email</label>
                 <Field
                   type="email"
                   name="email"
@@ -55,9 +56,7 @@ const Login = () => {
                 <ErrorMessage name="email" component="div" className="error-message" />
               </div>
               <div className="form-group">
-                <label className="form-label" htmlFor="password">
-                  Password
-                </label>
+                <label className="form-label" htmlFor="password">Password</label>
                 <Field
                   type="password"
                   name="password"
@@ -68,16 +67,9 @@ const Login = () => {
                 <ErrorMessage name="password" component="div" className="error-message" />
               </div>
               <div className="button-container">
-                <button
-                  type="submit"
-                  className="login-button"
-                >
-                  Login
-                </button>
+                <button type="submit" className="login1-button">Login</button>
               </div>
-              <a href="#" className="forgot-password">
-                Forgot Password?
-              </a>
+              <a href="#" className="forgot-password">Forgot Password?</a>
               <p className="register-link">
                 Don't have an account? <Link to="/signup" className="register-link">Register here</Link>
               </p>

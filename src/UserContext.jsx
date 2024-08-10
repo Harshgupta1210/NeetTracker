@@ -6,10 +6,12 @@ export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [userProgress, setUserProgress] = useState({
-    Physics: { totalTopics: 28, completedTopics: 0},
+    Physics: { totalTopics: 28, completedTopics: 0 },
     Chemistry: { totalTopics: 21, completedTopics: 0 },
     Biology: { totalTopics: 31, completedTopics: 0 },
   });
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const updateProgress = (subject, isCompleted) => {
     setUserProgress(prev => ({
@@ -26,8 +28,17 @@ const UserProvider = ({ children }) => {
     // Implement submission logic if needed
   };
 
+  const login = () => {
+    setIsAuthenticated(true);
+  };
+
+  const logout = (navigate) => {
+    setIsAuthenticated(false);
+    navigate('/login'); // Use the passed navigate function for redirection
+  };
+
   return (
-    <UserContext.Provider value={{ userProgress, updateProgress, submitProgress }}>
+    <UserContext.Provider value={{ userProgress, updateProgress, submitProgress, isAuthenticated, login, logout }}>
       {children}
     </UserContext.Provider>
   );

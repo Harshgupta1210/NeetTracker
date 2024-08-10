@@ -1,5 +1,5 @@
 /* General container styling */
-.login-container {
+.login1-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
 }
 
 /* Form container */
-.login-form {
+.login1-form {
   width: 100%;
   max-width: 400px;
   padding: 20px;
@@ -68,7 +68,7 @@
   justify-content: center;
 }
 
-.login-button {
+.login1-button {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -80,7 +80,7 @@
   transition: background-color 0.3s;
 }
 
-.login-button:hover {
+.login1-button:hover {
   background-color: #0056b3;
 }
 
