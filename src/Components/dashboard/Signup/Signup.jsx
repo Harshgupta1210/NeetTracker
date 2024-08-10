@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import './Signup.css'; // Import the CSS file
+import axios from 'axios';
+import './Signup.css';
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const initialValues = {
     name: '',
     email: '',
@@ -21,13 +24,16 @@ const SignUp = () => {
       .required('Confirm Password is required')
   });
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    if (values.password === values.confirmPassword) {
-      console.log('Submitted Values:', values);
-      // Add your signup logic here
-      setSubmitting(false);
-    } else {
-      console.error('Passwords do not match');
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    try {
+      const response = await axios.post('http://localhost:5000/signup', values);
+      console.log('Signup Successful:', response.data);
+      resetForm(); // Reset the form after successful signup
+      navigate('/login'); // Redirect to login page after successful signup
+    } catch (error) {
+      console.error('Signup Error:', error.response ? error.response.data : error.message);
+      alert('Signup failed. Please try again.');
+    } finally {
       setSubmitting(false);
     }
   };

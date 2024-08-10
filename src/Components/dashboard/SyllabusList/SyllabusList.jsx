@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import TopicItem from '../TopicItem/TopicItem';
-import { UserContext } from '../../UserContext';
+import TopicItem from '../../TopicItem/TopicItem';
+import { UserContext } from '../../../UserContext';
 import './SyllabusList.css';
 
 const SyllabusList = ({ syllabusData }) => {

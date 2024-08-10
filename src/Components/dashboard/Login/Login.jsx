@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  // Updated to useNavigate
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from 'yup';
+import axios from 'axios';
 import './Login.css';
 
 const Login = () => {
+  const navigate = useNavigate();  // Updated to useNavigate
+
   const initialValues = {
     email: '',
     password: ''
@@ -15,8 +18,16 @@ const Login = () => {
     password: Yup.string().required('Enter the password')
   });
 
-  const handleSubmit = (values) => {
-    console.log('Submitted Values:', values);
+  const handleSubmit = async (values) => {
+    try {
+      const response = await axios.post('http://localhost:5000/login', values);
+      console.log('Login Successful:', response.data);
+      // Redirect to a different page on successful login
+      navigate('/');  // Updated to use navigate
+    } catch (error) {
+      console.error('Login Error:', error.response ? error.response.data : error.message);
+      alert('Login failed. Please check your credentials.');
+    }
   };
 
   return (
