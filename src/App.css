@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -18,12 +18,12 @@
   filter: drop-shadow(0 0 2em #fafbfbaa);
 }
 
-.app-container {
+.app-container { */
   /* background-image: url('./assets/neet.jpg');  */
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 }
@@ -49,4 +49,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

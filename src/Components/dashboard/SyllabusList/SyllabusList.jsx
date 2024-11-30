@@ -10,17 +10,17 @@ const SyllabusList = ({ syllabusData }) => {
   const handleSubmit = (subject) => {
     console.log(`Submitting progress for ${subject}`);
 
-    // Check if submitProgress is a function
+    
     if (typeof submitProgress === 'function') {
       submitProgress(subject);
 
-      // Update state to reflect that the subject has been submitted
+      
       setSubmittedSubjects((prev) => ({
         ...prev,
         [subject]: true,
       }));
 
-      // Show an alert
+     
       alert(`Submitted for ${subject}`);
     } else {
       console.error('submitProgress is not a function');
@@ -39,7 +39,7 @@ const SyllabusList = ({ syllabusData }) => {
           </div>
           <button
             onClick={() => handleSubmit(subject.subject)}
-            disabled={submittedSubjects[subject.subject]} // Disable button if submitted
+            disabled={submittedSubjects[subject.subject]} 
           >
             {submittedSubjects[subject.subject] ? 'Submitted' : `Submit ${subject.subject}`}
           </button>

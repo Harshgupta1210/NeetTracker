@@ -38,7 +38,7 @@ const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ userProgress, updateProgress, submitProgress, isAuthenticated, login, logout }}>
+    <UserContext.Provider value={{ userProgress, updateProgress, submitProgress, isAuthenticated}}>
       {children}
     </UserContext.Provider>
   );

@@ -1,161 +1,219 @@
 /* General container styling */
 .login1-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: #f0f2f5;
-  min-height: 100vh;
-}
-
-/* Form container */
-.login1-form {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(19, 17, 17, 0.1);
-}
-
-/* Form title */
-.login-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #000000;
-}
-
-/* Form group styling */
-.form1-group {
-  margin-bottom: 15px;
-}
-
-/* Form label styling */
-.form1-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* Input field styling */
-.form1-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #ffffff;
-  box-sizing: border-box;
-  background-color: #333333; /* Darker background to contrast with white text */
-}
-
-.form-input1::placeholder {
-  color: #ffffff; /* White placeholder text */
-}
-
-.form-input1:focus {
-  border-color: #007bff;
-  outline: none;
-  background-color: #444444; /* Slightly lighter background on focus */
-}
-
-/* Error message styling */
-.error-message {
-  margin-top: 5px;
-  color: #e74c3c;
-  font-size: 14px;
-}
-
-/* Submit button styling */
-.button-container {
-  display: flex;
-  justify-content: center;
-}
-
-.login1-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.login1-button:hover {
-  background-color: #0056b3;
-}
-
-/* Forgot password link styling */
-.forgot-password {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-  color: #007bff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-/* Register link styling */
-.register-link {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #333333;
-}
-
-.register-link a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.register-link a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 576px) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	background-color: #f0f2f5;
+	min-height: 100vh;
+	width: 100%; /* Use percentage for fluid layout */
+  }
+  
+  /* Form container */
   .login1-form {
-    padding: 15px;
+	width: 100%;
+	max-width: 400px;
+	padding: 2rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(19, 17, 17, 0.1);
+	transition: max-width 0.3s ease;
   }
-
+  
+  /* Form title */
   .login-title {
-    font-size: 20px;
+	font-size: 1.5rem; /* Scalable font size */
+	margin-bottom: 1.5rem;
+	text-align: center;
+	color: #000000;
   }
-
-  .form-input {
-    font-size: 14px;
+  
+  /* Form group styling */
+  .form1-group {
+	margin-bottom: 1rem;
   }
-
+  
+  /* Form label styling */
+  .form1-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	color: #ffffff;
+  }
+  
+  /* Input field styling */
+  .form1-input {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem; /* Scalable font size */
+	color: #ffffff;
+	box-sizing: border-box;
+	background-color: #333333;
+  }
+  
+  .form1-input::placeholder {
+	color: #ffffff;
+  }
+  
+  .form1-input:focus {
+	border-color: #007bff;
+	outline: none;
+	background-color: #444444;
+  }
+  
+  /* Error message styling */
+  .error-message {
+	margin-top: 0.5rem;
+	color: #e74c3c;
+	font-size: 0.875rem; /* Use rem for consistency */
+  }
+  
+  /* Submit button styling */
+  .button-container {
+	display: flex;
+	justify-content: center;
+  }
+  
   .login1-button {
-    font-size: 14px;
+	width: 100%;
+	padding: 0.8rem;
+	font-size: 1rem; /* Scalable font size */
+	color: #fff;
+	background-color: #007bff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
   }
-}
-
-@media (max-width: 360px) {
-  .login-title {
-    font-size: 18px;
+  
+  .login1-button:hover {
+	background-color: #0056b3;
   }
-
-  .form-input {
-    padding: 8px;
-    font-size: 12px;
+  
+  /* Forgot password link styling */
+  .forgot-password {
+	display: block;
+	margin-top: 1rem;
+	text-align: center;
+	color: #007bff;
+	text-decoration: none;
+	font-size: 0.875rem;
   }
-
-  .login1-button {
-    padding: 8px;
-    font-size: 12px;
+  
+  .forgot-password:hover {
+	text-decoration: underline;
   }
-
+  
+  /* Register link styling */
   .register-link {
-    font-size: 12px;
+	margin-top: 1.5rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #333333;
   }
-}
+  
+  .register-link a {
+	color: #007bff;
+	text-decoration: none;
+  }
+  
+  .register-link a:hover {
+	text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+	.login1-form {
+	  max-width: 350px;
+	  padding: 1.5rem;
+	}
+  
+	.login-title {
+	  font-size: 1.4rem;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.login1-form {
+	  max-width: 300px;
+	  padding: 1.2rem;
+	}
+  
+	.login-title {
+	  font-size: 1.2rem;
+	}
+  
+	.form1-input {
+	  padding: 0.7rem;
+	  font-size: 0.9rem;
+	}
+  
+	.login1-button {
+	  font-size: 0.9rem;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.login1-form {
+	  max-width: 280px;
+	  padding: 1rem;
+	}
+  
+	.login-title {
+	  font-size: 1.1rem;
+	}
+  
+	.form1-input {
+	  font-size: 0.875rem;
+	}
+  
+	.login1-button {
+	  font-size: 0.875rem;
+	}
+  }
+  
+  @media (max-width: 360px) {
+	.login1-form {
+	  max-width: 250px;
+	  padding: 0.8rem;
+	}
+  
+	.login-title {
+	  font-size: 1rem;
+	}
+  
+	.form1-input {
+	  font-size: 0.8rem;
+	  padding: 0.6rem;
+	}
+  
+	.login1-button {
+	  font-size: 0.8rem;
+	}
+  
+	.register-link {
+	  font-size: 0.75rem;
+	}
+  }
+  
+  @media (min-width: 1920px) {
+	.login1-form {
+	  max-width: 500px;
+	  padding: 2.5rem;
+	}
+  
+	.login-title {
+	  font-size: 2rem;
+	}
+  
+	.form1-input {
+	  font-size: 1.2rem;
+	}
+  
+	.login1-button {
+	  font-size: 1.2rem;
+	}
+  }
+  

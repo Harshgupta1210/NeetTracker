@@ -1,34 +1,115 @@
 /* ProgressTracker.css */
 .progress-tracker-container {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.progress-tracker-container h2 {
-  color: #4CAF50;
-  margin-bottom: 10px;
-}
-
-.progress-tracker-container p {
-  color: rgb(0, 0, 0); /* Set text color to black */
-  font-size:20px;
-  font-weight:700;
-  margin: 5px 0;
-}
-
-progress {
-  width: 100%;
-  height: 20px;
-  margin: 10px 0;
-}
-
-@media (max-width: 600px) {
-  .progress-tracker-container {
-      padding: 10px;
+	padding: 2rem; /* Use rem for consistent spacing */
+	max-width: 1200px; /* Limit the container width for readability */
+	width: 90%; /* Use percentage for a fluid layout */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto; /* Center the container */
   }
-
+  
+  .progress-tracker-container h2 {
+	color: #4CAF50;
+	margin-bottom: 1rem; /* Use rem for spacing */
+	font-size: 2rem; /* Scalable font size */
+	text-align: center; /* Center-align the heading */
+  }
+  
+  .progress-tracker-container p {
+	color: #000; /* Text color set to black */
+	font-size: 1rem; /* Scalable font size */
+	font-weight: 700;
+	margin: 0.5rem 0; /* Use rem for spacing */
+	text-align: center; /* Center-align text for better layout */
+  }
+  
   progress {
-      height: 15px;
+	width: 100%; /* Full width within the container */
+	height: 1.25rem; /* Scalable height */
+	margin: 1rem 0;
+	border-radius: 5px; /* Add rounded corners for aesthetics */
+	appearance: none; /* Reset browser styles */
   }
-}
+  
+  /* Progress bar customization */
+  progress::-webkit-progress-bar {
+	background-color: #e0e0e0; /* Background color of the bar */
+	border-radius: 5px; /* Match the border radius */
+  }
+  
+  progress::-webkit-progress-value {
+	background-color: #4CAF50; /* Progress color */
+	border-radius: 5px; /* Match the border radius */
+  }
+  
+  /* Responsive Design for Different Screen Sizes */
+  @media (max-width: 1200px) {
+	.progress-tracker-container {
+	  padding: 1.5rem;
+	}
+  
+	.progress-tracker-container h2 {
+	  font-size: 1.8rem;
+	}
+  
+	.progress-tracker-container p {
+	  font-size: 0.95rem;
+	}
+  
+	progress {
+	  height: 1.2rem;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.progress-tracker-container {
+	  padding: 1rem;
+	}
+  
+	.progress-tracker-container h2 {
+	  font-size: 1.5rem;
+	}
+  
+	.progress-tracker-container p {
+	  font-size: 0.9rem;
+	}
+  
+	progress {
+	  height: 1rem;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.progress-tracker-container {
+	  padding: 0.8rem;
+	}
+  
+	.progress-tracker-container h2 {
+	  font-size: 1.2rem;
+	}
+  
+	.progress-tracker-container p {
+	  font-size: 0.8rem;
+	}
+  
+	progress {
+	  height: 0.8rem;
+	}
+  }
+  
+  @media (min-width: 1920px) {
+	.progress-tracker-container h2 {
+	  font-size: 2.5rem;
+	}
+  
+	.progress-tracker-container p {
+	  font-size: 1.2rem;
+	}
+  
+	progress {
+	  height: 1.5rem;
+	}
+  }
+  

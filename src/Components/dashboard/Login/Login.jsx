@@ -25,8 +25,8 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:5000/login', values);
       console.log('Login Successful:', response.data);
-      login();  // Update authentication state
-      navigate('/');  // Redirect to dashboard
+      login(); 
+      navigate('/');  
     } catch (error) {
       console.error('Login Error:', error.response ? error.response.data : error.message);
       alert('Login failed. Please check your credentials.');
